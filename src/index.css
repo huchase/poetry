@@ -1,0 +1,178 @@
+@import url("https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-sc/700.css");
+@import url("https://cdn.jsdelivr.net/gh/KonghaYao/chinese-free-web-font-storage/build/江西拙楷2.0/result.css");
+:root {
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.2em;
+    font-weight: 400;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    --divide-red: #a42a28;
+    --divide-gold: #c9a276;
+    --divide-green: #415b55;
+    --text-green:#5f9378;
+}
+body {
+    --book-text-color:#333;
+    --shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+body[arco-theme="dark"] {
+    --color-text-1: #c9a276;
+    --book-text-color:var(--color-text-1)
+    --shadow: 0 0 20px rgba(201, 162, 118, 0.25);
+}
+
+
+.noise::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url("/noise.png");
+    position: absolute;
+    z-index: 0;
+    opacity: 0.1;
+    pointer-events: none;
+    touch-action: none;
+}
+@media (prefers-color-scheme: dark) {
+    body {
+        color: var(--color-text-1);
+    }
+}
+.box{
+    height: 100%;
+    width: 100%;
+}
+.absolute-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+a {
+    font-weight: 500;
+    color: var(--text-green);
+    text-decoration: inherit;
+    transition: color 0.3s;
+}
+a:hover {
+    color: #7fa893;
+}
+
+body {
+    font-family: "jiangxizhuokai", "Noto Serif SC", Inter, Avenir, Helvetica,
+        Arial, sans-serif;
+    margin: 0;
+    /* flex 布局会导致全局提示错位 */
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+}
+.theme-switch .arco-switch-checked {
+    background-color: #fbb755;
+}
+.theme-switch .arco-switch-checked .arco-switch-dot {
+    color: #fbb755;
+}
+
+.box-row {
+    display: flex;
+    flex-direction: row;
+}
+.box-col {
+    display: flex;
+    flex-direction: column;
+}
+.box-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background-color: transparent;
+}
+.has-scroll ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-corner{
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--color-text-1);
+    pointer-events: all;
+    z-index: 100;
+}
+
+/* 首页印章图像 */
+.Index-Seal {
+    color: white;
+    background-color: var(--divide-red);
+    font-size: 3rem;
+    font-weight: bold;
+    height: 5rem;
+    padding: 1rem;
+    border-radius: 50%;
+    width: fit-content;
+    margin: 2rem auto;
+    position: relative;
+}
+.Index-Seal:before {
+    position: absolute;
+    content: "";
+    height: 90%;
+    width: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 2px solid #c5c5c5;
+}
+
+/* 最大的内容长度 */
+.content-max {
+    max-width: 700px;
+    margin:auto;
+}
+.long-list-item{
+    content-visibility: auto;
+}
+
+.one-row{
+    overflow: hidden;
+    white-space: nowrap; 
+    text-overflow:ellipsis;
+}
+
+
+/* 一个背景色随 theme 变化的盒子 */
+.panel{
+
+    background-color: var(--color-bg-1);
+}
+.flex-1{
+    flex:1
+}
+.none{
+    display: none;
+}
+hr{
+  
+    border:0
+}
+
+hr.ver{  height: 100%;
+    border-left: 1px solid var(--color-neutral-3);
+}
+hr.hor{
+    border-bottom: 1px solid var(--color-neutral-3);
+}

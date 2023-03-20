@@ -1,0 +1,74 @@
+.poetry-text {
+    color: var(--book-text-color);
+}
+
+.poetry-index {
+    user-select: none !important;
+    margin: 1rem;
+    text-decoration: underline;
+    text-align: center;
+    writing-mode: horizontal-tb;
+}
+
+.single-content {
+    align-items: center;
+}
+
+.poetry-wrapper {
+    /* 文档在小屏幕时，下方有一定空间较好 */
+    padding: 1rem !important;
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 100%;
+    font-family: var(--book-font-family);
+    width: 100%;
+}
+
+.poetry-wrapper.poetry-vertical {
+    max-height: 80%;
+}
+
+.poetry-content {
+    flex: 1;
+    overflow: scroll;
+    position: relative;
+}
+
+.poetry-vertical .poetry-content {
+    writing-mode: vertical-rl;
+}
+.poetry-vertical.box-row {
+    flex-direction: row-reverse;
+}
+.poetry-header {
+    display: flex;
+    align-items: baseline;
+    border-bottom: 2px solid var(--divide-red);
+    margin: 1rem 0 0 0;
+    padding: 0.5em;
+}
+.poetry-vertical .poetry-header {
+    writing-mode: vertical-rl;
+
+    margin: 0 1rem 0 0;
+    border-left: 2px solid var(--divide-red);
+    border-bottom: 0;
+}
+
+.poetry-vertical .poetry-header .btn {
+    transform-origin: 50% 50%;
+    transform: rotate(90deg);
+}
+.poetry-header .title {
+    font-size: 1.5em;
+}
+.poetry-header .subtitle {
+    font-size: 1em;
+    padding: 1em;
+}
+
+.poetry-tagging {
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+    text-decoration-color: var(--divide-red);
+}
