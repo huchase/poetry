@@ -1,6 +1,6 @@
 # 中华诗词大典 Beta
 
-[Beta 版本首页](https://.netlify.app/)
+[Beta 版本首页](https://hua-poetry.netlify.app/)
 
 -   [ ] 幽梦影
 -   [x] 全唐诗

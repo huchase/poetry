@@ -7,11 +7,11 @@ const data = [
         name: "字体支持",
         avatar: "/avatar.png",
         description: [
-            "字体支持是由江夏尧的中文 Web Font 项目进行支持的",
+            "字体支持是由huchase的中文 Web Font 项目进行支持的",
             "《中华诗词大典》中的默认字体采用江西拙楷、思源宋体和汇源明朝体",
             "其他提供的字体可在 Web Font 字库中查看，感谢字体支持。",
         ],
-        link: "https://.netlify.app/#/home",
+        link: "https://hua-poetry.netlify.app/#/home",
         bg: "https://images.unsplash.com/photo-1589895009255-67c7cb06de4e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=60",
     },
     {
