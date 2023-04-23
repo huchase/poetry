@@ -1,5 +1,5 @@
 class SearchSystem {
-    constructor() {}
-    async prepareTitleSearch() {}
+  constructor() {}
+  async prepareTitleSearch() {}
 }
-export const SearchServer = new SearchSystem();
+export const SearchServer = new SearchSystem()

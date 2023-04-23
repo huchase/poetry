@@ -5,6 +5,6 @@
   <Description>搜索诗词</Description>
   <InputEncoding>UTF-8</InputEncoding>
   <Url type="text/html" method="get"
-    template="https://chinese-poetry.netlify.app#/search?q={searchTerms}" />
-  <moz:SearchForm>https://chinese-poetry.netlify.app/#/search</moz:SearchForm>
+    template="https://hua-poetry.netlify.app#/search?q={searchTerms}" />
+  <moz:SearchForm>https://hua-poetry.netlify.app/#/search</moz:SearchForm>
 </OpenSearchDescription>

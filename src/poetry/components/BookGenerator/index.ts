@@ -1,2 +1,2 @@
-export * from "./CommonBook";
-export * from "./IndexPageOrigin";
+export * from './CommonBook'
+export * from './IndexPageOrigin'

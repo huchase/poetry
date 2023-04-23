@@ -1,13 +1,13 @@
-import { Button, Empty, Result, Space } from "@arco-design/web-react";
-import { IconLoading } from "@arco-design/web-react/icon";
-import { useNavigate } from "react-router-dom";
+import { Button, Empty, Space } from '@arco-design/web-react'
+import { IconLoading } from '@arco-design/web-react/icon'
+import { useNavigate } from 'react-router-dom'
 
-export const Loading = () => {
-    const nav = useNavigate();
-    return (
+export function Loading() {
+  const nav = useNavigate()
+  return (
         <Empty
             className="box-col"
-            style={{ height: "100%", justifyContent: "center" }}
+            style={{ height: '100%', justifyContent: 'center' }}
             icon={
                 <IconLoading
                     spin
@@ -21,11 +21,11 @@ export const Loading = () => {
                         <Button onClick={() => nav(-1)} type="secondary">
                             上一页
                         </Button>
-                        <Button onClick={() => nav("/")} type="secondary">
+                        <Button onClick={() => nav('/')} type="secondary">
                             首页
                         </Button>
                     </Space>
                 </Space>
             }></Empty>
-    );
-};
+  )
+}

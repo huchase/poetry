@@ -1,10 +1,10 @@
-import { ThemeChange } from "../ThemeChange";
-import { TopMenuController } from "../TopMenu";
+import { ThemeChange } from '../ThemeChange'
+import { TopMenuController } from '../TopMenu'
 
-export const applyThemeChange = () => {
-    TopMenuController.emit("register", {
-        slot: "Button",
-        component: ThemeChange,
-        list: true,
-    });
-};
+export function applyThemeChange() {
+  TopMenuController.emit('register', {
+    slot: 'Button',
+    component: ThemeChange,
+    list: true,
+  })
+}

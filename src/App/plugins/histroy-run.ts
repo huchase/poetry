@@ -1,10 +1,10 @@
-import { TopMenuController } from "../TopMenu";
-import { HistoryController } from "../../History/Pannel";
+import { TopMenuController } from '../TopMenu'
+import { HistoryController } from '../../History/Pannel'
 
-export const applyHistoryRun = () => {
-    TopMenuController.emit("register", {
-        slot: "Button",
-        component: HistoryController,
-        list: true,
-    });
-};
+export function applyHistoryRun() {
+  TopMenuController.emit('register', {
+    slot: 'Button',
+    component: HistoryController,
+    list: true,
+  })
+}

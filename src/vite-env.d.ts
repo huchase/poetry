@@ -1,8 +1,8 @@
 /// <reference types="vite/client" />
 declare module "pangu" {
-    export default {
-        spacing: (s: string) => string,
-    };
+  export default {
+    spacing: (s: string) => string,
+  };
 }
 
 declare const __Search_Origin__: string;

@@ -1,30 +1,30 @@
-import Highlighter from "web-highlighter";
-import { createServer, SlotMap } from "../../../../Server/Template";
+import type Highlighter from 'web-highlighter'
+import { SlotMap, createServer } from '../../../../Server/Template'
 
-export type DataType = {
-    highlighter: Highlighter;
-    name: string;
-    title: string; // 组件的中文名称
-    lookingId: string;
-};
+import './context-menu.css'
+
+export interface DataType {
+  highlighter: Highlighter
+  name: string
+  title: string // 组件的中文名称
+  lookingId: string
+}
 const { Template, controller, DataContext } = createServer<
     DataType,
-    "Header" | "Footer",
-    "Button"
+    'Header' | 'Footer',
+    'Button'
 >({
-    name: "poetry-content",
-});
-export { controller as ContextMenuController };
-
-import "./context-menu.css";
+  name: 'poetry-content',
+})
+export { controller as ContextMenuController }
 export const ContextMenu = Template(({ Slots, SlotList }) => {
-    return (
+  return (
         <main className="context-menu box-col">
             {Slots.Header && (
                 <header>
                     <DataContext.Consumer>
                         {({ title }) => {
-                            return <div className="title">{title}</div>;
+                          return <div className="title">{title}</div>
                         }}
                     </DataContext.Consumer>
 
@@ -35,5 +35,5 @@ export const ContextMenu = Template(({ Slots, SlotList }) => {
                 <SlotMap list={SlotList.Button}></SlotMap>
             </nav>
         </main>
-    );
-});
+  )
+})

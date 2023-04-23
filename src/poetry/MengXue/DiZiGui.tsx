@@ -1,48 +1,48 @@
-import { FC } from "react";
+import type { FC } from 'react'
 
-import { BookStore } from "../utils/BookStore";
+import { Route } from 'react-router-dom'
+import { BookStore } from '../utils/BookStore'
 import {
-    CommonBook,
-    IndexPageOrigin,
-    ObjectProvider,
-} from "../components/BookGenerator/index";
-import { Route } from "react-router-dom";
-type SingleData = {
-    chapter: string;
-    paragraphs: string[];
-};
-export type FetchData = {
-    title: string;
-    author: string;
-    content: SingleData[];
-};
+  CommonBook,
+  IndexPageOrigin,
+} from '../components/BookGenerator/index'
+
+interface SingleData {
+  chapter: string
+  paragraphs: string[]
+}
+export interface FetchData {
+  title: string
+  author: string
+  content: SingleData[]
+}
 
 const info = {
-    title: "弟子规",
-    root: "/dizigui",
-    adapter(i: SingleData) {
-        return {
-            ...i,
-            title: i.chapter,
-            content: i.paragraphs,
-        };
-    },
-    getData(): Promise<SingleData[]> {
-        return BookStore.getBook<FetchData>("/mengxue/dizigui.json").then(
-            (i) => i.content
-        );
-    },
-};
+  title: '弟子规',
+  root: '/dizigui',
+  adapter(i: SingleData) {
+    return {
+      ...i,
+      title: i.chapter,
+      content: i.paragraphs,
+    }
+  },
+  getData(): Promise<SingleData[]> {
+    return BookStore.getBook<FetchData>('/mengxue/dizigui.json').then(
+      i => i.content,
+    )
+  },
+}
 const DiZiGui: FC = () => {
-    return <CommonBook {...info}></CommonBook>;
-};
+  return <CommonBook {...info}></CommonBook>
+}
 
 const DiZiGuiIndex: FC = () => {
-    return <IndexPageOrigin {...info}></IndexPageOrigin>;
-};
-export const DiZiGuiRouter = () => (
-    <>
+  return <IndexPageOrigin {...info}></IndexPageOrigin>
+}
+export function DiZiGuiRouter() {
+  return <>
         <Route path="/dizigui" element={<DiZiGuiIndex />}></Route>
         <Route path="/dizigui/:poetryId" element={<DiZiGui />}></Route>
     </>
-);
+}

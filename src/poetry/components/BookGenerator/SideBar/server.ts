@@ -1,4 +1,5 @@
-import mitt from "mitt";
+import mitt from 'mitt'
+
 export const sidebarServer = mitt<{
-    toggleVisible: boolean | undefined;
-}>();
+  toggleVisible: boolean | undefined
+}>()
